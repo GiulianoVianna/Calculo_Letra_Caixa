@@ -44,26 +44,26 @@ def calculo_layout():
 def limpa_campos():
     tela.ln_altura.setText("")
     tela.ln_quantidade.setText("")
-    tela.ln_valor.setText("")
+    tela.ln_valor.setText("R$ 0,00")
 
 def limpa_campos_layout():
     tela.ln_altura.setText("")
     tela.ln_quantidade.setText("")
-    tela.ln_valor.setText("")
-    tela.ln_layout_1.setText("0")
-    tela.ln_layout_2.setText("0")
-    tela.ln_layout_3.setText("0")
-    tela.ln_layout_4.setText("0")
-    tela.ln_layout_5.setText("0")
-    tela.ln_layout_6.setText("0")
-    tela.ln_valor_total.setText("")
+    tela.ln_valor.setText("R$ 0,00")
+    tela.ln_layout_1.setText("0,00")
+    tela.ln_layout_2.setText("0,00")
+    tela.ln_layout_3.setText("0,00")
+    tela.ln_layout_4.setText("0,00")
+    tela.ln_layout_5.setText("0,00")
+    tela.ln_layout_6.setText("0,00")
+    tela.ln_valor_total.setText("R$ 0,00")
 
 ##################################################################################
 
 ## Função valida se os campos dos layots estão preenchidos
 def mensagem_campo_layout():
     if tela.ln_layout_1.text() and tela.ln_layout_2.text() and tela.ln_layout_3.text() and tela.ln_layout_4.text() \
-        and tela.ln_layout_5.text() and tela.ln_layout_6.text() != "0":
+        and tela.ln_layout_5.text() and tela.ln_layout_6.text() != "0,00":
         msg1 = QMessageBox()
         msg1.setIcon(QMessageBox.Information)
         msg1.setWindowTitle('Atenção!')
@@ -114,32 +114,32 @@ def calcular():
                 tela.ln_valor.setText(f'R$ {valor_total:,.2f}'.replace(",", "X").replace(".", ",").replace("X", ".") )
 
                 # Regra de validação dos campos e atribuição de valores
-                if tela.ln_layout_1.text() == "0":
+                if tela.ln_layout_1.text() == "0,00":
                     tela.ln_layout_1.setText(f'{valor_total:,.2f}'.replace(",", "X").replace(".", ",").replace("X", "."))
                     limpa_campos()
                     calculo_layout()
 
-                elif tela.ln_layout_2.text() == "0":  
+                elif tela.ln_layout_2.text() == "0,00":  
                     tela.ln_layout_2.setText(f'{valor_total:,.2f}'.replace(",", "X").replace(".", ",").replace("X", "."))
                     calculo_layout()
                     limpa_campos()                    
 
-                elif tela.ln_layout_3.text() == "0":  
+                elif tela.ln_layout_3.text() == "0,00":  
                     tela.ln_layout_3.setText(f'{valor_total:,.2f}'.replace(",", "X").replace(".", ",").replace("X", "."))
                     calculo_layout()
                     limpa_campos()                    
 
-                elif tela.ln_layout_4.text() == "0":  
+                elif tela.ln_layout_4.text() == "0,00":  
                     tela.ln_layout_4.setText(f'{valor_total:,.2f}'.replace(",", "X").replace(".", ",").replace("X", "."))
                     calculo_layout()
                     limpa_campos()                    
 
-                elif tela.ln_layout_5.text() == "0":  
+                elif tela.ln_layout_5.text() == "0,00":  
                     tela.ln_layout_5.setText(f'{valor_total:,.2f}'.replace(",", "X").replace(".", ",").replace("X", "."))
                     calculo_layout()
                     limpa_campos()
                                 
-                elif tela.ln_layout_6.text() == "0":  
+                elif tela.ln_layout_6.text() == "0,00":  
                     tela.ln_layout_6.setText(f'{valor_total:,.2f}'.replace(",", "X").replace(".", ",").replace("X", "."))
                     calculo_layout()
                     limpa_campos()
@@ -153,7 +153,7 @@ def calcular():
     except:
         mensagem_error()
 
-    # Calcula o valor total dos layouts calculados
+    # Calcula o valor total dos layouts caluclados
     valor_total_geral = float(tela.ln_layout_1.text().replace(",", "X").replace(".", "").replace("X", ".")) \
     + float(tela.ln_layout_2.text().replace(",", "X").replace(".", "").replace("X", ".")) \
     + float(tela.ln_layout_3.text().replace(",", "X").replace(".", "").replace("X", ".")) \

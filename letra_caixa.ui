@@ -196,7 +196,7 @@ color: rgb(76, 76, 76);</string>
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>0</string>
+     <string>0,00</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -218,7 +218,7 @@ color: rgb(76, 76, 76);</string>
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>0</string>
+     <string>0,00</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -240,7 +240,7 @@ color: rgb(76, 76, 76);</string>
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>0</string>
+     <string>0,00</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -330,7 +330,7 @@ color: rgb(76, 76, 76);</string>
      <string/>
     </property>
     <property name="text">
-     <string>0</string>
+     <string>0,00</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -352,7 +352,7 @@ color: rgb(76, 76, 76);</string>
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>0</string>
+     <string>0,00</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -374,7 +374,7 @@ color: rgb(76, 76, 76);</string>
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>0</string>
+     <string>0,00</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -435,7 +435,7 @@ color: rgb(76, 76, 76);</string>
     <string notr="true">color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
-    <string>0</string>
+    <string>R$ 0,00</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -492,6 +492,9 @@ color: rgb(255, 255, 255);
     <property name="styleSheet">
      <string notr="true">background-color: rgb(229, 229, 229);
 color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>R$ 0,00</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
