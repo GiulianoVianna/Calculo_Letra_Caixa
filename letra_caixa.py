@@ -47,9 +47,6 @@ def limpa_campos():
     tela.ln_valor.setText("R$ 0,00")
 
 def limpa_campos_layout():
-    tela.ln_altura.setText("")
-    tela.ln_quantidade.setText("")
-    tela.ln_valor.setText("R$ 0,00")
     tela.ln_layout_1.setText("0,00")
     tela.ln_layout_2.setText("0,00")
     tela.ln_layout_3.setText("0,00")
@@ -153,7 +150,7 @@ def calcular():
     except:
         mensagem_error()
 
-    # Calcula o valor total dos layouts caluclados
+    # Calcula o valor total dos layouts calculados
     valor_total_geral = float(tela.ln_layout_1.text().replace(",", "X").replace(".", "").replace("X", ".")) \
     + float(tela.ln_layout_2.text().replace(",", "X").replace(".", "").replace("X", ".")) \
     + float(tela.ln_layout_3.text().replace(",", "X").replace(".", "").replace("X", ".")) \
