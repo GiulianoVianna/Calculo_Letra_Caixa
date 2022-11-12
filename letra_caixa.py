@@ -17,7 +17,6 @@ def mensagem_altura():
         msg1.setText('Favor informar a altura da letra caixa em cm! - Ex: 10')
         x = msg1.exec()
 
-
 def mensagem_quantidade():
         msg1 = QMessageBox()
         msg1.setIcon(QMessageBox.Information)
@@ -61,7 +60,7 @@ def limpa_campos_layout():
 
 ##################################################################################
 
-## Função que valida se os campos dos layots estão preenchidos
+## Função valida se os campos dos layots estão preenchidos
 def mensagem_campo_layout():
     if tela.ln_layout_1.text() and tela.ln_layout_2.text() and tela.ln_layout_3.text() and tela.ln_layout_4.text() \
         and tela.ln_layout_5.text() and tela.ln_layout_6.text() != "0":
@@ -80,7 +79,7 @@ def calcular():
     mensagem_campo_layout()    
 
     try:     
-        # Valida sem um dos radio button foi selecionado.
+        # Valida sem um dos radio buttons foi selecionado.
         if tela.rd_1.isChecked() or tela.rd_2.isChecked() or tela.rd_3.isChecked() or tela.rd_4.isChecked():
 
             # Valida qual radio button foi selecionado e atribui um valor a variavel (valor_material).
@@ -154,7 +153,7 @@ def calcular():
     except:
         mensagem_error()
 
-    # Calcula o valor total dos layouts caluclados
+    # Calcula o valor total dos layouts calculados
     valor_total_geral = float(tela.ln_layout_1.text().replace(",", "X").replace(".", "").replace("X", ".")) \
     + float(tela.ln_layout_2.text().replace(",", "X").replace(".", "").replace("X", ".")) \
     + float(tela.ln_layout_3.text().replace(",", "X").replace(".", "").replace("X", ".")) \
